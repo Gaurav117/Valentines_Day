@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -49,12 +50,15 @@ body {
         transform: translateY(100vh) rotate(0deg);
         opacity: 0;
     }
+
     10% {
         opacity: 0.3;
     }
+
     90% {
         opacity: 0.3;
     }
+
     100% {
         transform: translateY(-100px) rotate(360deg);
         opacity: 0;
@@ -182,6 +186,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -206,9 +211,11 @@ body {
         transform: scale(0.3);
         opacity: 0;
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -222,6 +229,17 @@ body {
     margin-bottom: 25px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     animation: bounceIn 0.8s ease;
+}
+
+.celebration-gif {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: bounceIn 0.8s ease 0.2s both;
 }
 
 .celebration-message {
@@ -239,15 +257,20 @@ body {
 }
 
 @keyframes heartBeat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     25% {
         transform: scale(1.15);
     }
+
     50% {
         transform: scale(1);
     }
+
     75% {
         transform: scale(1.1);
     }
@@ -277,6 +300,7 @@ body {
         transform: translateY(-100px) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0.5;
@@ -288,43 +312,47 @@ body {
     body {
         padding: 15px;
     }
-    
+
     .proposal-card {
         padding: 45px 35px;
         max-width: 100%;
     }
-    
+
     .title {
         font-size: 2rem;
     }
-    
+
     .title .heart-icon {
         font-size: 2rem;
     }
-    
+
     .question {
         font-size: 1.2rem;
         margin-bottom: 30px;
     }
-    
+
     .btn {
         padding: 14px 35px;
         font-size: 1rem;
     }
-    
+
     .celebration-content {
         padding: 40px 30px;
         max-width: 100%;
     }
-    
+
     .celebration-title {
         font-size: 2.5rem;
     }
-    
+
+    .celebration-gif {
+        max-width: 250px;
+    }
+
     .celebration-message {
         font-size: 1.1rem;
     }
-    
+
     .heart-burst {
         font-size: 4rem;
     }
@@ -334,41 +362,45 @@ body {
     body {
         padding: 10px;
     }
-    
+
     .proposal-card {
         padding: 35px 25px;
     }
-    
+
     .title {
         font-size: 1.7rem;
     }
-    
+
     .title .heart-icon {
         font-size: 1.8rem;
     }
-    
+
     .question {
         font-size: 1.1rem;
     }
-    
+
     .btn {
         padding: 12px 30px;
         font-size: 0.95rem;
     }
-    
+
     .celebration-content {
         padding: 30px 20px;
     }
-    
+
     .celebration-title {
         font-size: 2rem;
     }
-    
+
+    .celebration-gif {
+        max-width: 200px;
+    }
+
     .celebration-message {
         font-size: 1rem;
         line-height: 1.6;
     }
-    
+
     .heart-burst {
         font-size: 3rem;
     }
