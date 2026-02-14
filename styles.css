@@ -1,0 +1,156 @@
+:root {
+  --bg1: #43000f;
+  --bg2: #7a0018;
+  --rose: #ff1f57;
+  --rose-dark: #b50032;
+  --cream: #ffe8ef;
+  --card: rgba(255, 240, 246, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at 20% 20%, #ff4f7d33 0 30%, transparent 35%),
+    radial-gradient(circle at 80% 10%, #ff89a344 0 25%, transparent 35%),
+    linear-gradient(160deg, var(--bg1), var(--bg2));
+  color: #5e001a;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.petals,
+.petals::before,
+.petals::after {
+  position: fixed;
+  inset: -10% 0 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #ff2b5d 0 6px, transparent 7px),
+    radial-gradient(circle, #ff6f92 0 5px, transparent 6px),
+    radial-gradient(circle, #ffb1c5 0 4px, transparent 5px);
+  background-size: 160px 220px, 140px 200px, 110px 180px;
+  animation: drift 10s linear infinite;
+  opacity: 0.35;
+}
+
+.petals::before,
+.petals::after {
+  content: "";
+}
+
+.petals::before {
+  animation-duration: 7s;
+  opacity: 0.25;
+}
+
+.petals::after {
+  animation-duration: 5s;
+  opacity: 0.2;
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(-8%);
+  }
+  to {
+    transform: translateY(8%);
+  }
+}
+
+.card,
+.celebration {
+  width: min(92vw, 680px);
+  border-radius: 30px;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  text-align: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 24px 60px #0000004a;
+  border: 2px solid #ffffff50;
+}
+
+.card {
+  background: var(--card);
+}
+
+.for {
+  margin: 0;
+  color: var(--rose-dark);
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  margin: 0.4rem 0 0.8rem;
+  color: #920022;
+}
+
+.subtext {
+  margin: 0 auto 1.1rem;
+  max-width: 50ch;
+}
+
+.buttons {
+  position: relative;
+  height: 190px;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  padding: 0.9rem 1.6rem;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.yes {
+  background: linear-gradient(160deg, #ff5886, #d6003b);
+  color: white;
+  box-shadow: 0 12px 28px #d6003b50;
+}
+
+.yes:hover {
+  transform: scale(1.06);
+}
+
+.no {
+  position: absolute;
+  top: 75px;
+  left: 52%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #78001f;
+  box-shadow: 0 8px 22px #0000002f;
+}
+
+.celebration {
+  background: radial-gradient(circle at top, #fff2f7, #ffd6e2 70%);
+  color: #620018;
+}
+
+.celebration p {
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+.signature {
+  margin-top: 1rem !important;
+  font-weight: 700;
+  color: #a30030;
+}
+
+.hidden {
+  display: none;
+}
